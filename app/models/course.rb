@@ -13,3 +13,4 @@ def filter
     errors.add(:comments, "Not allowed")
 end
 end
+end

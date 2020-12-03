@@ -1,1 +1,23 @@
-<h1> Courses</h1>
+<div style="border: 2px solid red; 
+border-radius: 25px; text-align:center; background-color:orange;">
+
+
+All courses
+</div> <br> 
+
+<div style="border: 2px solid red; 
+border-radius: 25px; text-align:center; background-color:orange;">
+
+<%=link_to 'Add a course',new_course_path%> 
+
+</div><br>
+
+<% @courses.each do |course| %>
+    <div style="border: 2px solid red;display:no; 
+    border-radius: 25px; text-align:center; background-color:orange; color:blue;">
+    <p> Course Name:<%= link_to course.course_name, course_path(course)%> </p>
+    
+    <%end%>
+
+
+    
