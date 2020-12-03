@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   resources :students
   root 'courses#index'#devise require a root route
   resources :courses
