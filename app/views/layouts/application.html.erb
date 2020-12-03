@@ -10,7 +10,21 @@
   </head>
 
   <body>
+  <nav   style ="background-color:#0B103D; color: white;border: 2px solid red; 
+  border-radius:5px; text-align:center;">
+  
+    
+  <%=link_to 'Courses', courses_path%>
+    <%if user_signed_in?%>
 
+    <%=form_tag(destroy_user_session_path, method: :delete, style: "display:inline-block;") do %>
+      <%=submit_tag "Sign Out"%>
+      <%end%>
+      <%else%>
+      <%=link_to 'Sign Up', new_user_registration_path%>
+      <%=link_to 'Sign In',new_user_session_path%>
+      <%end%>
+    </nav>
   
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
