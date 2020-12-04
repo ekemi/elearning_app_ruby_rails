@@ -3,14 +3,7 @@ border-radius: 25px; text-align:center; background-color:orange;">
 
 
 All courses
-</div> <br> 
-
-<div style="border: 2px solid red; 
-border-radius: 25px; text-align:center; background-color:orange;">
-
-<%=link_to 'Add a course',new_course_path%> 
-
-</div><br>
+</div> <br>
 
 <% @courses.each do |course| %>
     <div style="border: 2px solid red;display:no; 
@@ -19,5 +12,11 @@ border-radius: 25px; text-align:center; background-color:orange;">
     
     <%end%>
 
-
+    <h6 style="border: 2px solid black; 
+    border-radius: 2px; text-align:center; background-color:black;">
+    
+    <%=link_to 'Add a Course',new_course_path%> 
+    
+    </h6><br>
+    
     
