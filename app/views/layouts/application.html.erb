@@ -15,6 +15,7 @@
   
     
   <%=link_to 'Courses', courses_path%>
+  <%=link_to 'Students', students_path%>
     <%if user_signed_in?%>
 
     <%=form_tag(destroy_user_session_path, method: :delete, style: "display:inline-block;") do %>

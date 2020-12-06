@@ -1,0 +1,16 @@
+
+<%= display_errors(student)%> <%# helper method%>
+
+<div style="border: 2px solid red; border-radius: 5px; text-align:center; background-color:orange;>
+<%=form_for student do |f| %> <%#= is better to use local variable%>
+
+    <%=f.label :student_name, "Student Name"%>
+    <%=f.text_field :student_name%>
+    <br><br>
+    
+    <%=f.label :studentID, "Student ID:"%>
+    <%=f.number_field :studentID%>
+    <br><br>
+    <%=f.submit "Create a student"%>
+    <%end%>
+    </div>
