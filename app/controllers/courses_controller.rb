@@ -23,6 +23,16 @@ class CoursesController < ApplicationController
 end
 
 def update
+    if @course.update(course_params)
+        redirect_to course_path(@course)
+    else
+     render :edit
+    end
+end
+
+def destroy
+    @course.destroy
+    redirect_to courses_path
 end
    private
 

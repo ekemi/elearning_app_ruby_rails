@@ -3,3 +3,11 @@
 <h6>Profesor Name: <%=@course.profesor_name%></h6>
 <h6>Course Length: <%=@course.course_length%></h6>
 <h6>Number of Videos :<%=@course.number_videos%></h6>
+<h6 style="border: 2px solid red; border-radius: 5px; text-align:center; background-color:orange;">
+<%=link_to 'Edit a Course', edit_course_path(@course)%>
+</h6>
+<h6 style="border: 2px solid red; border-radius: 5px; text-align:center; background-color:orange;"
+<%= form_tag(course_path(@course), :method => "delete") do %>
+<%= submit_tag "Delete a Course" %>
+<%end%>
+</h6>

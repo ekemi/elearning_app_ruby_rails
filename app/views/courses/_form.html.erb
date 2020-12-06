@@ -1,0 +1,21 @@
+<%= display_errors(course)%> <%# helper method%>
+
+<div style="border: 2px solid red; border-radius: 5px; text-align:center; background-color:orange;>
+<%=form_for course do |f| %> <%#= is better to use local variable%>
+
+    <%=f.label :course_name,"Course Name:"%>
+    <%=f.text_field :course_name%>
+    <br><br>
+    
+    <%=f.label :profesor_name,"Profesor Name:"%>
+    <%=f.text_field :profesor_name%>
+    <br><br>
+    <%=f.label :course_length,"Course length:"%>
+    <%=f.text_field :course_length%>
+    <br><br>
+    <%=f.label :number_videos,"Nomber of Videos:"%>
+    <%=f.number_field :number_videos%>
+    <br><br>
+    <%=f.submit "Create a course"%>
+    <%end%>
+    </div>
