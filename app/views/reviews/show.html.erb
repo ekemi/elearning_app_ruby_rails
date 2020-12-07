@@ -1,0 +1,11 @@
+<h6> Review Details</h6>
+ <h6>Profesor Name: <%=link_to @review.course.profesor_name,course_path(@review.course)%></h6>
+<h6>Student Identification: <%=link_to @review.student.studentID,student_path(@review.student)%></h6>
+<h6>Ratings:  <%=@review.ratings%></h6>
+<h6>Comments:  <%=@review.comments%></h6>
+
+<h6><%=form_tag(review_path(@review), method: :delete) do %>
+
+    <%=submit_tag "Delete a review"%>
+    
+    <%end%></h6>

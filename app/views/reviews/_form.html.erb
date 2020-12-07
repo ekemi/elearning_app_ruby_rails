@@ -1,0 +1,20 @@
+
+<%= display_errors(review)%> <%# helper method%>
+
+<div style="border: 2px solid red; border-radius: 5px; text-align:center; background-color:orange;>
+<%=form_for review do |f| %> <%#= is better to use local variable%>
+<%=f.collection_select :course_id,current_user.courses,:id,:profesor_name%><br><br>
+<%=f.collection_select :student_id,Student.all,:id,:studentID%><br><br>
+
+<%=f.label :ratings, "Ratings"%>
+<%=f.text_field :ratings%>
+<br><br>
+
+<%=f.label :comments, "Comments"%>
+    <%=f.text_field :comments%>
+    <br><br>
+    
+    
+    <%=f.submit "Create a review"%>
+    <%end%>
+    </div>
