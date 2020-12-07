@@ -7,8 +7,10 @@
 <%=link_to 'Edit a Course', edit_course_path(@course)%>
 </h6>
 <h6 style="border: 2px solid red; border-radius: 5px; text-align:center; background-color:orange;"
-<%= form_tag(course_path(@course), :method => "delete") do %>
-<%= submit_tag "Delete a Course" %>
+<h6><%=form_tag(review_path(@course), method: :delete) do %>
+
+    <%=submit_tag "Delete a course"%>
+    
 <%end%>
 </h6>
 

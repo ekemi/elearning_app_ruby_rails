@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Elearning_app
 
-Things you may want to cover:
+My webapp provides a place for an user to add a class. A User can sign up, login and review a profesor.
 
-* Ruby version
+Installation
 
-* System dependencies
+To use this app, clone the repo, then execute: $ bundle
 
-* Configuration
+Usage
 
-* Database creation
+1- Run rake db:migrate
+2- Run rails s
+3- Lauch http://local3000 in your browser
 
-* Database initialization
+Contributing
+Bug reports and pull requests are welcome. Contributors are expected to adhere to the Contributor Covenant.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+License
+Distributed under the MIT License
