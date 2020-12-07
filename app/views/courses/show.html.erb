@@ -11,3 +11,7 @@
 <%= submit_tag "Delete a Course" %>
 <%end%>
 </h6>
+
+<h6> <%=link_to "#{@course.profesor_name}'s reviews",course_reviews_path(@course)%>
+<h6> <%=link_to "Set up a review for #{@course.profesor_name}",new_course_review_path(@course)%>
+<h6> <%=link_to " #{@course.profesor_name}s' students'",course_students_path(@course)%>

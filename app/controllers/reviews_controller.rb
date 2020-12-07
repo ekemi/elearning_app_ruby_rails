@@ -4,16 +4,27 @@ class ReviewsController < ApplicationController
     before_action :set_review, only:[:show,:edit, :update, :destroy]
 
     def index
-    
+       @course = current_user.courses.find_by_id(params[:course_id])
+       if @course
+        @reviews = @course.reviews
+       else
           @reviews = current_user.reviews
+  
     end
-
+end
     def show
     end
 
     def new
-    
+        @course = current_user.courses.find_by_id(params[:course_id])
+        @student = Student.find_by_id(params[:id])
+        if @course
+            @review = @course.reviews.build
+        elsif @student
+            @review = @student.reviews.build
+        else
         @review = Review.new
+        end
 end
 
 def create

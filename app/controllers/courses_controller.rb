@@ -2,7 +2,8 @@ class CoursesController < ApplicationController
     before_action :authenticate_user!
     before_action :set_course, only:[:show,:edit, :update, :destroy]
     def index
-        @courses = current_user.courses
+        
+            @courses = current_user.courses.search(params[:search])
     end
    def show 
    end
@@ -40,7 +41,7 @@ def set_course
     @course = current_user.courses.find(params[:id]) 
 end
 def course_params#strong_params
-    params.require(:course).permit(:course_name,:profesor_name, :course_length, :number_videos)
+    params.require(:course).permit(:course_name,:profesor_name, :course_length, :number_videos,:search)
 end
 
 end

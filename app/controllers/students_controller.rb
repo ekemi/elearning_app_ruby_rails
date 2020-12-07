@@ -1,11 +1,17 @@
 class StudentsController < ApplicationController
 
-    before_action :authenticate_user!
+before_action :authenticate_user!
 before_action :set_student, only:[:show,:edit, :update, :destroy]
 
 
 def index
+    @course = current_user.courses.find_by_id(params[:course_id])
+   if @course
+    @students = @course.students.all
+   else
+
     @students = Student.all
+   end
 end
 def show
 end
